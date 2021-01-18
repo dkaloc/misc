@@ -1,0 +1,6 @@
+#
+# Mouse Toolkit
+#
+
+zstyle ':prezto:module:mouse-toolkit' zle-mouse-mode 'buttons-only'
+zstyle ':prezto:module:mouse-toolkit' capture-mouse-in-zle 'yes'
