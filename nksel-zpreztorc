@@ -1,0 +1,67 @@
+#
+# Natural Keyboard Selection in ZLE
+#
+
+# zstyle ':prezto:module:nksel' keep-previous-highlights 'yes'
+# zstyle ':prezto:module:nksel' copy-on-select 'yes'
+zstyle ':prezto:module:nksel' use-crlf-line-endings 'yes'
+
+zstyle ':prezto:module:nksel' bindkey \
+  '^[:K'  'cut-selection' \
+  '^[:X'  'copy-selection-or-interrupt-on-ctrl-c'
+
+zstyle ':prezto:module:nksel' start-or-continue-selecting-on \
+  '^[:A'  'backward-char' \
+  '^[:B'  'forward-char' \
+  '^[:C'  'emacs-backward-word' \
+  '^[:D'  'emacs-forward-word' \
+  '^[:E'  'beginning-of-line' \
+  '^[:F'  'end-of-line' \
+  '^[:G'  'exchange-point-and-mark' \
+  '^[:H'  'down-line' \
+  '^[:I'  'up-line' \
+  '^[:J'  'nksel-select-all'
+
+zstyle ':prezto:module:nksel' clear-selection-and-execute-on \
+  'backward-char' \
+  'backward-word' \
+  'emacs-backward-word' \
+  'beginning-of-line' \
+  'down-line' \
+  'end-of-line' \
+  'forward-char' \
+  'forward-word' \
+  'emacs-forward-word' \
+  'up-line' \
+  'beginning-of-buffer-or-history' \
+  'beginning-of-line-hist' \
+  'beginning-of-history' \
+  'down-line-or-history' \
+  'down-line-or-search' \
+  'end-of-buffer-or-history' \
+  'end-of-line-hist' \
+  'end-of-history' \
+  'up-line-or-history' \
+  'up-line-or-search'
+
+zstyle ':prezto:module:nksel' delete-selection-or-execute-on \
+  'backward-delete-char' \
+  'backward-delete-word' \
+  'backward-kill-line' \
+  'backward-kill-word' \
+  'delete-char' \
+  'delete-word' \
+  'kill-word' \
+  'kill-line' \
+  'kill-whole-line'
+
+zstyle ':prezto:module:nksel' delete-selection-and-execute-on \
+  'insert-last-word' \
+  'quoted-insert' \
+  'self-insert' \
+  'self-insert-unmeta' \
+  'yank' \
+  'get-line'
+
+zstyle ':prezto:module:nksel' delete-selection-and-execute-on-noarg-call \
+  'bracketed-paste'
