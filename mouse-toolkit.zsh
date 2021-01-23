@@ -106,6 +106,10 @@ _mouse_toolkit_install_zle_line_init_and_finish_handlers() {
     _MOUSE_TOOLKIT_ZLE_MOUSE_MODE_ENABLE_FCE='mouse_toolkit_enable_sgr_encoded_buttons_and_drag_mode'
     _MOUSE_TOOLKIT_ZLE_MOUSE_MODE_DISABLE_FCE='mouse_toolkit_disable_sgr_encoded_buttons_and_drag_mode'
     ;;
+  'custom')
+    _MOUSE_TOOLKIT_ZLE_MOUSE_MODE_ENABLE_FCE=''
+    _MOUSE_TOOLKIT_ZLE_MOUSE_MODE_DISABLE_FCE=''
+    ;;
   *)
     _MOUSE_TOOLKIT_ZLE_MOUSE_MODE_ENABLE_FCE='mouse_toolkit_enable_sgr_encoded_buttons_drag_and_move_mode'
     _MOUSE_TOOLKIT_ZLE_MOUSE_MODE_DISABLE_FCE='mouse_toolkit_disable_sgr_encoded_buttons_drag_and_move_mode'
